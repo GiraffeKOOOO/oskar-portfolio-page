@@ -3,4 +3,5 @@ export enum Colours {
   navButtonBackground = 'rgba(47, 48, 51, 0.1)',
   white = '#ffffff',
   black = '#000000',
+  grey = '#737373',
 }

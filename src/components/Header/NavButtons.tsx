@@ -1,13 +1,18 @@
 import { Stack } from '@mui/material';
 import NavButton from './NavButton';
+import { RefObject } from 'react';
 
-const NavButtons = () => {
+type NavButtonsProps = {
+  galleryRef: RefObject<HTMLDivElement>;
+};
+
+const NavButtons = ({ galleryRef }: NavButtonsProps) => {
   return (
     <Stack flexDirection="row" sx={{ marginTop: '0.5rem', justifyContent: 'center' }}>
-      <NavButton>Work</NavButton>
+      <NavButton galleryRef={galleryRef}>Work</NavButton>
       <NavButton>About Me</NavButton>
-      <NavButton>Contact</NavButton>
       <NavButton>Socials</NavButton>
+      <NavButton>Contact</NavButton>
     </Stack>
   );
 };
