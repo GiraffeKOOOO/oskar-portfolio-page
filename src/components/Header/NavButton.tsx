@@ -5,10 +5,12 @@ const StyledNavButton = styled(Button)<ButtonProps>({
   color: Colours.white,
   '&:hover': {
     backgroundColor: `${Colours.navButtonBackground}`,
+    textDecoration: 'underline',
   },
   borderRadius: '0.7rem',
   marginLeft: '0.5rem',
   marginRight: '0.4rem',
+  textShadow: `0.5px 0.5px ${Colours.backgroundGrey}`,
 });
 
 type NavButtonProps = {

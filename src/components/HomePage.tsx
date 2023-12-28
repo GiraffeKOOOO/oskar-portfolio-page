@@ -1,8 +1,12 @@
-import { Grid } from '@mui/material';
-import Header from './Header/Header';
+import { Grid, useMediaQuery, useTheme } from '@mui/material';
+
 import { Colours } from './Theme/Colours';
+import Header from './Header/Header';
 
 const HomePage = () => {
+  const theme = useTheme();
+  const mobile = useMediaQuery(theme.breakpoints.down('sm'));
+
   return (
     <Grid
       container
@@ -11,7 +15,7 @@ const HomePage = () => {
       style={{ backgroundColor: `${Colours.backgroundGrey}` }}
     >
       <Grid item xs={12}>
-        <Header />
+        <Header mobile={mobile} />
       </Grid>
 
       <Grid item xs={12}>
