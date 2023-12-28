@@ -7,6 +7,7 @@ const NavButtons = () => {
       <NavButton>About Me</NavButton>
       <NavButton>Work</NavButton>
       <NavButton>Contact</NavButton>
+      <NavButton>Socials</NavButton>
     </Stack>
   );
 };

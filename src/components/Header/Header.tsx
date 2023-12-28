@@ -11,6 +11,7 @@ const Header = () => {
       justifyContent="center"
       alignItems="center"
       //   style={{ height: '400px' }}
+      border="1px solid red"
     >
       <Grid item>
         <Title />
