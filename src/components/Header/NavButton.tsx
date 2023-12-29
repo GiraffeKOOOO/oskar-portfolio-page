@@ -19,9 +19,10 @@ type NavButtonProps = {
   galleryRef?: RefObject<HTMLDivElement>;
   aboutRef?: RefObject<HTMLDivElement>;
   socialsRef?: RefObject<HTMLDivElement>;
+  contactRef?: RefObject<HTMLDivElement>;
 };
 
-const NavButton = ({ children, galleryRef, aboutRef, socialsRef }: NavButtonProps) => {
+const NavButton = ({ children, galleryRef, aboutRef, socialsRef, contactRef }: NavButtonProps) => {
   const scrollToGallery = useCallback(() => {
     galleryRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }, [galleryRef]);
@@ -34,6 +35,10 @@ const NavButton = ({ children, galleryRef, aboutRef, socialsRef }: NavButtonProp
     socialsRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }, [socialsRef]);
 
+  const scrollToContact = useCallback(() => {
+    contactRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, [contactRef]);
+
   if (galleryRef) {
     return <StyledNavButton onClick={scrollToGallery}>{children}</StyledNavButton>;
   }
@@ -44,6 +49,10 @@ const NavButton = ({ children, galleryRef, aboutRef, socialsRef }: NavButtonProp
 
   if (socialsRef) {
     return <StyledNavButton onClick={scrollToSocials}>{children}</StyledNavButton>;
+  }
+
+  if (contactRef) {
+    return <StyledNavButton onClick={scrollToContact}>{children}</StyledNavButton>;
   }
 
   return <StyledNavButton>{children}</StyledNavButton>;

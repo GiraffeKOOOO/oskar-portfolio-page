@@ -1,5 +1,7 @@
 export enum Colours {
   backgroundGrey = '#2f3033',
+  footerGrey = '#1e1e1f',
+  opaqueGrey = '#d4d4d4',
   navButtonBackground = 'rgba(47, 48, 51, 0.1)',
   white = '#ffffff',
   black = '#000000',
