@@ -4,4 +4,6 @@ export enum Colours {
   white = '#ffffff',
   black = '#000000',
   grey = '#737373',
+  facebook = 'rgba(8, 102, 255, 0.4)',
+  linkedin = 'rgba(10, 102, 194, 0.4)',
 }

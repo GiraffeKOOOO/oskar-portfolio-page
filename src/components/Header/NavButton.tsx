@@ -17,14 +17,27 @@ const StyledNavButton = styled(Button)<ButtonProps>({
 type NavButtonProps = {
   children: string;
   galleryRef?: RefObject<HTMLDivElement>;
+  socialsRef?: RefObject<HTMLDivElement>;
 };
 
-const NavButton = ({ children, galleryRef }: NavButtonProps) => {
+const NavButton = ({ children, galleryRef, socialsRef }: NavButtonProps) => {
   const scrollToGallery = useCallback(() => {
     galleryRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }, [galleryRef]);
 
-  return <StyledNavButton onClick={scrollToGallery}>{children}</StyledNavButton>;
+  const scrollToSocials = useCallback(() => {
+    socialsRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, [socialsRef]);
+
+  if (galleryRef) {
+    return <StyledNavButton onClick={scrollToGallery}>{children}</StyledNavButton>;
+  }
+
+  if (socialsRef) {
+    return <StyledNavButton onClick={scrollToSocials}>{children}</StyledNavButton>;
+  }
+
+  return <StyledNavButton>{children}</StyledNavButton>;
 };
 
 export default NavButton;
