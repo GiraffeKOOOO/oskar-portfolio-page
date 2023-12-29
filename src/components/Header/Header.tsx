@@ -9,10 +9,11 @@ import { Colours } from '../Theme/Colours';
 type HeaderProps = {
   mobile: boolean;
   galleryRef: RefObject<HTMLDivElement>;
+  aboutRef: RefObject<HTMLDivElement>;
   socialsRef: RefObject<HTMLDivElement>;
 };
 
-const Header = ({ mobile, galleryRef, socialsRef }: HeaderProps) => {
+const Header = ({ mobile, galleryRef, aboutRef, socialsRef }: HeaderProps) => {
   if (mobile) {
     return (
       <BackgroundWrapper>
@@ -26,7 +27,7 @@ const Header = ({ mobile, galleryRef, socialsRef }: HeaderProps) => {
           </Grid>
 
           <Grid item>
-            <NavButtons galleryRef={galleryRef} socialsRef={socialsRef} />
+            <NavButtons galleryRef={galleryRef} aboutRef={aboutRef} socialsRef={socialsRef} />
           </Grid>
         </Grid>
       </BackgroundWrapper>
@@ -45,7 +46,7 @@ const Header = ({ mobile, galleryRef, socialsRef }: HeaderProps) => {
         </Grid>
 
         <Grid item>
-          <NavButtons galleryRef={galleryRef} socialsRef={socialsRef} />
+          <NavButtons galleryRef={galleryRef} aboutRef={aboutRef} socialsRef={socialsRef} />
         </Grid>
       </Grid>
       <Divider
