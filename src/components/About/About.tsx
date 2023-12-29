@@ -83,10 +83,9 @@ const About = ({ mobile, aboutRef }: AboutProps) => {
         <Grid item xs={5} style={{ display: 'flex', justifyContent: 'flex-end' }}>
           <img src={image1} height={'600px'} style={{ marginRight: '2rem' }} />
         </Grid>
-        <Grid item xs={2} style={{ display: 'flex', textAlign: 'left', width: '2rem' }}>
+        <Grid item xs={5} style={{ display: 'flex', textAlign: 'left', width: '2rem' }}>
           <TextSection />
         </Grid>
-        <Grid item xs={3} />
       </Grid>
     </>
   );

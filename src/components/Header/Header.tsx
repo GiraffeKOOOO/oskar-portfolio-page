@@ -11,9 +11,10 @@ type HeaderProps = {
   galleryRef: RefObject<HTMLDivElement>;
   aboutRef: RefObject<HTMLDivElement>;
   socialsRef: RefObject<HTMLDivElement>;
+  contactRef: RefObject<HTMLDivElement>;
 };
 
-const Header = ({ mobile, galleryRef, aboutRef, socialsRef }: HeaderProps) => {
+const Header = ({ mobile, galleryRef, aboutRef, socialsRef, contactRef }: HeaderProps) => {
   if (mobile) {
     return (
       <BackgroundWrapper>
@@ -27,7 +28,12 @@ const Header = ({ mobile, galleryRef, aboutRef, socialsRef }: HeaderProps) => {
           </Grid>
 
           <Grid item>
-            <NavButtons galleryRef={galleryRef} aboutRef={aboutRef} socialsRef={socialsRef} />
+            <NavButtons
+              galleryRef={galleryRef}
+              aboutRef={aboutRef}
+              socialsRef={socialsRef}
+              contactRef={contactRef}
+            />
           </Grid>
         </Grid>
       </BackgroundWrapper>
@@ -46,7 +52,12 @@ const Header = ({ mobile, galleryRef, aboutRef, socialsRef }: HeaderProps) => {
         </Grid>
 
         <Grid item>
-          <NavButtons galleryRef={galleryRef} aboutRef={aboutRef} socialsRef={socialsRef} />
+          <NavButtons
+            galleryRef={galleryRef}
+            aboutRef={aboutRef}
+            socialsRef={socialsRef}
+            contactRef={contactRef}
+          />
         </Grid>
       </Grid>
       <Divider
